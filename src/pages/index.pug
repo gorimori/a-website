@@ -21,6 +21,9 @@ append vars
       { url: '#', label: 'お問い合わせ', },
     ];
 
+append head
+  link(rel="stylesheet", href="/common/css/home.css")
+
 append body
   header.c-section
     .c-section__inner.-maw_m
@@ -64,4 +67,35 @@ append body
               - const {url, label} = nav;
               a(href=url).l-header__drawer-row
                 .l-header__drawer-row-inner #{label}
+
+  main.c-section
+    .c-section__inner.-maw_m
+      .p-home-top
+        .p-home-top__text-box
+          .p-home-top__sub-copy こころ 夏目漱石
+          .p-home-top__main-copy
+            | 私は
+            span.u-no-break その人を
+            span.u-no-break 常に
+            span.u-no-break 先生と
+            span.u-no-break 呼んでいた。
+          .p-home-top__lead
+            .p-home-top__lead-text
+              | だからここでもただ先生と書くだけで本名は打ち明けない。
+              br
+              | これは世間を憚かる遠慮というよりも、
+              br
+              | その方が私にとって自然だからである。
+
+            .p-home-top__lead-text
+              | 私はその人の記憶を呼び起すごとに、
+              br
+              | すぐ「先生」といいたくなる。筆を執っても心持は同じ事である。
+              br
+              | よそよそしい頭文字などはとても使う気にならない。
+        .p-home-top__img-box
+          .p-home-top__img-box-inner
+            img.p-home-top__img(
+              src="https://placehold.jp/800x600.png"
+            )
 

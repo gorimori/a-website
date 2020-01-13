@@ -5,7 +5,10 @@ const chokidar = require('chokidar');
 const sass = require('node-sass');
 
 /** @type {string[]} */
-const entryPoints = [path.join('src', 'scss', 'main.scss')];
+const entryPoints = [
+  path.join('src', 'scss', 'main.scss'),
+  path.join('src', 'scss', 'home.scss'),
+];
 
 const targetDir = path.join('_site', 'common', 'css');
 if (!fs.existsSync(targetDir)) {
