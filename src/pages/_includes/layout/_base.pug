@@ -1,0 +1,34 @@
+block vars
+  -
+    meta = {
+      title: "ダミー: title",
+      ogType: "website",
+      url: "https://example.com/",
+      ogImage: "ダミー: ogImage",
+      siteName: "a-website",
+      description: "ダミー: description",
+      appleTouchIcon: "ダミー: appleTouchIcon",
+    }
+
+<!DOCTYPE html>
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title #{meta.title}
+
+    meta(property="og:locale" content="ja_JP")
+    meta(property="og:title" content=meta.title)
+    meta(property="og:type" content=meta.ogType)
+    meta(property="og:url" content=meta.url)
+    meta(property="og:image" content=meta.ogImage)
+    meta(property="og:site_name" content=meta.siteName)
+    meta(property="og:description" content=meta.description)
+
+    link(rel="canonical" href=meta.url)
+    link(rel="apple-touch-icon" href=meta.appleTouchIcon)
+
+    block head
+
+  body
+    block body

@@ -1,0 +1,12 @@
+extends /layout/_base.pug
+
+append vars
+  -
+    meta = Object.assign(meta, {
+      title: "ホーム"
+    });
+
+append body
+  header
+    .c-block
+      .c-block__inner
