@@ -6,7 +6,42 @@ append vars
       title: "ホーム"
     });
 
+    const leftNavs = [
+      { url: '#', label: '特長', },
+      { url: '#', label: '得意分野', },
+      { url: '#', label: 'メニュー', },
+      { url: '#', label: '実績', },
+      { url: '#', label: 'ブログ', },
+      { url: '#', label: '会社紹介', },
+      { url: '#', label: '採用情報', },
+    ];
+
+    const rightNavs = [
+      { url: '#', label: '会社案内ダウンロード', },
+      { url: '#', label: 'お問い合わせ', },
+    ];
+
 append body
-  header
-    .c-block
-      .c-block__inner
+  header.c-section
+    .c-section__inner.-maw_m
+      nav.l-header
+        .l-header__col
+          .l-header__col-inner
+            a(href="/").l-header__logo
+              img(
+                src="https://placehold.jp/78x32.png" alt="ロゴ"
+              ).l-header__logo-img
+
+            .l-header__navs
+              each nav in leftNavs
+                - const {url, label} = nav;
+                a(href=url).l-header__nav
+                  .l-header__nav-inner #{label}
+
+        .l-header__col
+          .l-header__col-inner
+            .l-header__navs
+              each nav in rightNavs
+                - const {url, label} = nav;
+                a(href=url).l-header__nav
+                  .l-header__nav-inner #{label}

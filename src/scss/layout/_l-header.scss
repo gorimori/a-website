@@ -1,0 +1,47 @@
+.l-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: (24 / 16) + rem 0;
+}
+
+.l-header__logo {
+  display: block;
+  @media #{$screenSize_S} {
+    margin-right: (16 / 16) + rem;
+  }
+}
+
+.l-header__col {
+  & + & {
+    margin-left: (16 / 16) + rem;
+  }
+}
+
+.l-header__col-inner {
+  display: flex;
+  align-items: center;
+}
+
+.l-header__navs {
+  display: flex;
+  align-items: center;
+}
+
+.l-header__nav {
+  display: block;
+
+  & + & {
+    @media #{$screenSize_M} {
+      margin-left: (16 / 16) + rem;
+    }
+
+    @media #{$screenSize_L} {
+      margin-left: (30 / 16) + rem;
+    }
+  }
+}
+
+.l-header__nav-inner {
+  padding: (2 / 16) + rem (8 / 16) + rem;
+}

@@ -1,3 +1,10 @@
 .c-section {
   padding: 0 3.125%;
 }
+
+.c-section__inner {
+  &.-maw_m {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
