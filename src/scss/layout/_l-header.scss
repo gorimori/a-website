@@ -1,20 +1,31 @@
 .l-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: (16 / 16) + rem;
   padding: (24 / 16) + rem 0;
+
+  @media #{$screenSize_M} {
+    grid-template-columns: 80px 1fr auto;
+  }
 }
 
 .l-header__logo {
   display: block;
-  @media #{$screenSize_S} {
-    margin-right: (16 / 16) + rem;
-  }
 }
 
 .l-header__col {
-  & + & {
-    margin-left: (16 / 16) + rem;
+  &.-menu {
+    @media #{$screenSize_M} {
+      display: none;
+    }
+  }
+
+  &.-nav {
+    display: none;
+
+    @media #{$screenSize_M} {
+      display: block;
+    }
   }
 }
 
@@ -33,15 +44,40 @@
 
   & + & {
     @media #{$screenSize_M} {
-      margin-left: (16 / 16) + rem;
+      margin-left: (14 / 16) + rem;
     }
 
     @media #{$screenSize_L} {
       margin-left: (30 / 16) + rem;
+    }
+
+    @media #{$screenSize_XL} {
+      margin-left: (45 / 16) + rem;
     }
   }
 }
 
 .l-header__nav-inner {
   padding: (2 / 16) + rem (8 / 16) + rem;
+}
+
+.l-header__drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $color-brown;
+  transform: translateY(-100%);
+  transition: transform 0.25s $easing-accelerate;
+
+  &.-show {
+    transition-duration: 0.3s;
+    transition-timing-function: $easing-decelerate;
+    transform: translateY(0);
+  }
+
+  @media #{$screenSize_M} {
+    display: none;
+  }
 }

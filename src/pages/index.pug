@@ -32,16 +32,36 @@ append body
                 src="https://placehold.jp/78x32.png" alt="ロゴ"
               ).l-header__logo-img
 
+        .l-header__col.-nav
+          .l-header__col-inner
             .l-header__navs
               each nav in leftNavs
                 - const {url, label} = nav;
                 a(href=url).l-header__nav
                   .l-header__nav-inner #{label}
 
-        .l-header__col
+        .l-header__col.-nav
           .l-header__col-inner
             .l-header__navs
               each nav in rightNavs
                 - const {url, label} = nav;
                 a(href=url).l-header__nav
                   .l-header__nav-inner #{label}
+
+        .l-header__col.-menu
+          .l-header__col-inner
+            button(type="button")
+              span.u-visually-hidden メニュー
+
+        .l-header__drawer
+          .l-header__drawer-inner
+            -
+              const spNavs = [
+                {url: '/', label: 'ホーム'}
+              ].concat(leftNavs, rightNavs);
+
+            each nav in spNavs
+              - const {url, label} = nav;
+              a(href=url).l-header__drawer-row
+                .l-header__drawer-row-inner #{label}
+

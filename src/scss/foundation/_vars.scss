@@ -7,3 +7,9 @@ $screenSize_S: '(min-width: 768px)';
 $screenSize_XS: '(max-width: 767px)';
 $screenSize_XXS: '(min-width: 375px)';
 $screenSize_XXXS: '(max-width: 374px)';
+
+$color-brown: #3e3a37;
+
+$easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+$easing-decelerate: cubic-bezier(0, 0, 0.2, 1);
+$easing-accelerate: cubic-bezier(0.4, 0, 1, 1);
