@@ -52,3 +52,12 @@
     margin-top: (10 / 16) + rem;
   }
 }
+
+.p-home-top__button {
+  margin-top: (20 / 16) + rem;
+
+  @media #{$screenSize_S} {
+    margin-top: (30 / 16) + rem;
+    width: 300px;
+  }
+}

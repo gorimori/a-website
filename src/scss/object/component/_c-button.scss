@@ -1,0 +1,23 @@
+.c-button {
+  display: block;
+  background: $color-black;
+  transition: background-color 0.4s $easing-standard;
+  text-decoration: none;
+
+  @media #{$screenSize_S} {
+    &:hover {
+      background: $color-gold;
+      transition-duration: 0.5s;
+    }
+  }
+}
+
+.c-button__inner {
+  padding: (18 / 16) + rem (8 / 16) + rem;
+}
+
+.c-button__text {
+  color: $color-white;
+  text-align: center;
+  font-weight: 700;
+}
