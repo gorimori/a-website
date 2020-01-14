@@ -1,0 +1,52 @@
+.p-home-reason {
+  position: relative;
+  margin-top: (70 / 16) + rem;
+}
+
+.p-home-reason__inner {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.p-home-reason__bg-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.p-home-reason__bg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+
+.p-home-reason__heading {
+  font-weight: 700;
+  font-size: (26 / 16) + rem;
+}
+
+.p-home-reason__desc {
+  margin-top: (22 / 16) + rem;
+}
+
+.p-home-reason__inner {
+  padding: (58 / 16) + rem;
+}
+
+.p-home-reason__sentence {
+  & + & {
+    margin-top: (12 / 16) + rem;
+  }
+}
+
+.p-home-reason__text-box {
+  width: 50%;
+
+  @media #{$screenSize_L} {
+    width: 45%;
+  }
+}
