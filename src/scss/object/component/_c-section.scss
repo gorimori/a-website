@@ -7,4 +7,12 @@
     max-width: 1440px;
     margin: 0 auto;
   }
+
+  &.-pt_1 {
+    padding-top: (70 / 16) + rem;
+  }
+
+  &.-pb_1 {
+    padding-bottom: (70 / 16) + rem;
+  }
 }
