@@ -1,0 +1,28 @@
+$xs: 12;
+$s: 14;
+$n: 16;
+$m: 18;
+
+.c-text {
+  font-size: ($n / 16) + rem;
+
+  &.-fixed {
+    font-size: $n + px;
+  }
+
+  &.-xs {
+    font-size: ($xs / 16) + rem;
+
+    &.-fixed {
+      font-size: $xs + px;
+    }
+  }
+
+  &.-s {
+    font-size: ($s / 16) + rem;
+
+    &.-fixed {
+      font-size: $s + px;
+    }
+  }
+}

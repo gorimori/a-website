@@ -1,0 +1,11 @@
+.c-col {
+  display: grid;
+
+  &.-min_300 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  &.-gap_1 {
+    gap: 30px;
+  }
+}
