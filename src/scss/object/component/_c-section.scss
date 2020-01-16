@@ -1,5 +1,12 @@
 .c-section {
   padding: 0 3.125%;
+
+  &.-header {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: $z-header;
+  }
 }
 
 .c-section__inner {
