@@ -21,6 +21,21 @@ append vars
       { url: '#', label: 'お問い合わせ', },
     ];
 
+    const cases = [
+      {label: 'すると彼らは'},
+      {label: '私が陸へ上がって'},
+      {label: '先生が昨日のように'},
+      {label: 'すぐ手拭で頭を包んで'},
+      {label: 'それで私の目的は'},
+      {label: '比較的広々した所へ来ると'},
+      {label: 'すると彼らは'},
+      {label: '私が陸へ上がって'},
+      {label: '先生が昨日のように'},
+      {label: 'すぐ手拭で頭を包んで'},
+      {label: 'それで私の目的は'},
+      {label: '比較的広々した所へ来ると'},
+    ];
+
 append head
   link(rel="stylesheet", href="/common/css/home.css")
 
@@ -137,21 +152,6 @@ append body
             .c-col__item piyo
             .c-col__item hogehoge
 
-        -
-          const cases = [
-            {label: 'すると彼らは'},
-            {label: '私が陸へ上がって'},
-            {label: '先生が昨日のように'},
-            {label: 'すぐ手拭で頭を包んで'},
-            {label: 'それで私の目的は'},
-            {label: '比較的広々した所へ来ると'},
-            {label: 'すると彼らは'},
-            {label: '私が陸へ上がって'},
-            {label: '先生が昨日のように'},
-            {label: 'すぐ手拭で頭を包んで'},
-            {label: 'それで私の目的は'},
-            {label: '比較的広々した所へ来ると'},
-          ]
         section.p-home-section
           .p-home-heading わざと避けて東京の近くで
           .p-home-sub-heading.-mt_1 せっかく来た私
@@ -160,10 +160,19 @@ append body
               - const {label} = the_case;
               .c-col__item
                 a(href="#").c-img-block
-                  img(
-                    src="https://placehold.jp/340x170.png"
-                    alt=""
-                  ).c-img-block__img
+                  .c-img-block__inner
+                    img(
+                      src="https://placehold.jp/340x170.png"
+                      alt=""
+                    ).c-img-block__img
+
+                  .c-img-block__hover
+                    .c-img-block__hover-inner
+                      img(
+                        src="https://placehold.jp/cc9999/993333/40x40.png"
+                        alt=""
+                      ).c-img-block__hover-icon
+                      .c-img-block__hover-text 詳しく見る
 
                 .c-text.u-bold #{label}
 

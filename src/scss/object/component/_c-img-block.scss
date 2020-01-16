@@ -1,0 +1,72 @@
+$_in-duration: 0.3s;
+$_out-duration: 0.25s;
+
+.c-img-block {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.c-img-block__inner {
+  transition: transform $_out-duration $easing-accelerate;
+  position: relative;
+  padding-top: 50%;
+  background: $color-brown;
+
+  @media #{$screenSize_S} {
+    .c-img-block:hover & {
+      transform: scale(1.1);
+      transition-timing-function: $easing-decelerate;
+      transition-duration: $_in-duration;
+    }
+  }
+}
+
+.c-img-block__img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.c-img-block__hover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity $_out-duration $easing-accelerate;
+
+  @media #{$screenSize_S} {
+    .c-img-block:hover & {
+      opacity: 1;
+      transition-timing-function: $easing-decelerate;
+      transition-duration: $_in-duration;
+    }
+  }
+}
+
+.c-img-block__hover-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translate(0, 10px);
+  transition: opacity $_out-duration $easing-accelerate,
+    transform $_out-duration $easing-accelerate;
+
+  @media #{$screenSize_S} {
+    .c-img-block:hover & {
+      opacity: 1;
+      transform: translate(0, 0);
+
+      transition-timing-function: $easing-decelerate, $easing-decelerate;
+      transition-duration: $_in-duration;
+    }
+  }
+}
