@@ -146,47 +146,51 @@ append body
         section.p-home-section
           .p-home-heading すぐ私の注意を惹いた
           .p-home-sub-heading.-mt_1 先生と私
-          .c-col.-min_300.-gap_1
-            .c-col__item hoge
-            .c-col__item fuga
-            .c-col__item piyo
-            .c-col__item hogehoge
+          .p-home-section__body
+            .c-col.-min_300.-gap_1
+              .c-col__item hoge
+              .c-col__item fuga
+              .c-col__item piyo
+              .c-col__item hogehoge
 
         section.p-home-section
           .p-home-heading わざと避けて東京の近くで
           .p-home-sub-heading.-mt_1 せっかく来た私
-          .c-col.-min_300.-gap_1
-            each the_case in cases
-              - const {label} = the_case;
-              .c-col__item
-                a(href="#").c-img-block
-                  .c-img-block__inner
-                    img(
-                      src="https://placehold.jp/340x170.png"
-                      alt=""
-                    ).c-img-block__img
-
-                  .c-img-block__hover
-                    .c-img-block__hover-inner
+          .p-home-section__body
+            .c-col.-min_300.-gap_1
+              each the_case in cases
+                - const {label} = the_case;
+                .c-col__item
+                  a(href="#").c-img-block
+                    .c-img-block__inner
                       img(
-                        src="https://placehold.jp/cc9999/993333/40x40.png"
+                        src="https://placehold.jp/340x170.png"
                         alt=""
-                      ).c-img-block__hover-icon
-                      .c-img-block__hover-text 詳しく見る
+                      ).c-img-block__img
 
-                .c-block
-                  .c-text.u-bold #{label}
+                    .c-img-block__hover
+                      .c-img-block__hover-inner
+                        img(
+                          src="https://placehold.jp/cc9999/993333/40x40.png"
+                          alt=""
+                        ).c-img-block__hover-icon
+                        .c-img-block__hover-text 詳しく見る
 
-                .c-block
-                  a(href="#").c-text.-s.c-prefix-right-hover
-                    span.c-prefix-right
-                      span.c-prefix-right__icon
-                      span.c-prefix-right__text 詳しく見る
+                  .c-block
+                    .c-text.u-bold #{label}
+
+                  .c-block
+                    a(href="#").c-text.-s.c-prefix-right-hover
+                      span.c-prefix-right
+                        span.c-prefix-right__icon
+                        span.c-prefix-right__text 詳しく見る
 
         section.p-home-section
           .p-home-heading 彼は電報を私に見せて
           .p-home-sub-heading.-mt_1 一人ぼっちになった
+          .p-home-section__body
 
         section.p-home-section
           .p-home-heading 私がその掛茶屋で
           .p-home-sub-heading.-mt_1 先生を見た時は
+          .p-home-section__body
