@@ -1,0 +1,37 @@
+$_lv1: (4 / 16) + rem;
+$_lv2: (8 / 16) + rem;
+$_lv3: (12 / 16) + rem;
+$_lv4: (20 / 16) + rem;
+$_lv5: (32 / 16) + rem;
+$_lv6: (52 / 16) + rem;
+$_lv7: (84 / 16) + rem;
+
+.c-block {
+  &.-lv_1 {
+    margin-top: $_lv1;
+  }
+
+  &.-lv_2 {
+    margin-top: $_lv2;
+  }
+
+  &.-lv_3 {
+    margin-top: $_lv3;
+  }
+
+  &.-lv_4 {
+    margin-top: $_lv4;
+  }
+
+  &.-lv_5 {
+    margin-top: $_lv5;
+  }
+
+  &.-lv_6 {
+    margin-top: $_lv6;
+  }
+
+  &.-lv_7 {
+    margin-top: $_lv7;
+  }
+}
