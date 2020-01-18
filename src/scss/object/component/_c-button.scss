@@ -10,14 +10,39 @@
       transition-duration: 0.5s;
     }
   }
+
+  &.-white {
+    background: $color-white;
+    border: 1px solid $color-black;
+
+    @media #{$screenSize_S} {
+      &:hover {
+        background: $color-black;
+      }
+    }
+  }
 }
 
 .c-button__inner {
   padding: (18 / 16) + rem (8 / 16) + rem;
+
+  &.-thin {
+    padding: (12 / 16) + rem (6 / 16) + rem;
+  }
 }
 
 .c-button__text {
   color: $color-white;
   text-align: center;
   font-weight: 700;
+
+  .c-button.-white & {
+    transition: color 0.4s $easing-standard;
+    color: $color-black;
+  }
+
+  .c-button.-white:hover & {
+    color: $color-white;
+    transition-duration: 0.5s;
+  }
 }

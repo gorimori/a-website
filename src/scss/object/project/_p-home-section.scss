@@ -23,3 +23,12 @@
 .p-home-section__body {
   margin-top: (40 / 16) + rem;
 }
+
+.p-home-section__button {
+  margin-top: (32 / 16) + rem;
+
+  @media #{$screenSize_S} {
+    width: 240px;
+    margin: (32 / 16) + rem auto 0;
+  }
+}
