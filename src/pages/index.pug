@@ -36,6 +36,26 @@ append vars
       {label: '比較的広々した所へ来ると'},
     ];
 
+    const main = {
+      copy: {
+        sub: ['こころ', '&nbsp;', '夏目漱石'],
+        main: ['私は', 'その人を', '常に', '先生と', '呼んでいた。']
+      },
+      lead: {
+        first: [
+          ['だから', 'ここでも', 'ただ', '先生と', '書くだけで', '本名は', '打ち明け', 'ない。'],
+          ['これは', '世間を', '憚かる', '遠慮と', 'いう', 'よりも、'],
+          ['その方が', '私に', 'とって', '自然', 'だから', 'である。']
+        ],
+        second: [
+          ['私は', 'その人の', '記憶を', '呼び起す', 'ごとに、'],
+          ['すぐ', '「先生」と', 'いいたく', 'なる。', '筆を', '執っても', '心持は', '同じ事', 'である。'],
+          ['よそよそしい', '頭文字などは', 'とても', '使う気に', 'ならない。']
+        ]
+      },
+      button: ['私は', '一人', '取り', '残され', 'た。']
+    }
+
 append head
   link(rel="stylesheet", href="/common/css/home.css")
 
@@ -88,38 +108,30 @@ append body
       .c-section__inner.-maw_m
         .p-home-top
           .p-home-top__text-box
-            .p-home-top__sub-copy こころ 夏目漱石
+            .p-home-top__sub-copy
+              +noBreak(main.copy.sub)
+
             .p-home-top__main-copy
-              | 私は
-              span.u-no-break その人を
-              span.u-no-break 常に
-              span.u-no-break 先生と
-              span.u-no-break 呼んでいた。
+              +noBreak(main.copy.main)
+
             .p-home-top__lead
               .p-home-top__lead-text
-                | だからここでもただ先生と書くだけで本名は打ち明けない。
-                br
-                | これは世間を憚かる遠慮というよりも、
-                br
-                | その方が私にとって自然だからである。
+                each words, i in main.lead.first
+                  +noBreak(words)
 
               .p-home-top__lead-text
-                | 私はその人の記憶を呼び起すごとに、
-                br
-                | すぐ「先生」といいたくなる。筆を執っても心持は同じ事である。
-                br
-                | よそよそしい頭文字などはとても使う気にならない。
+                each words, i in main.lead.second
+                  +noBreak(words)
 
             .p-home-top__button
               a(href="#").c-button
                 .c-button__inner
-                  .c-button__text 私は一人取り残された。
+                  .c-button__text
+                    +noBreak(main.button)
 
           .p-home-top__img-box
             .p-home-top__img-box-inner
-              img.p-home-top__img(
-                src="https://placehold.jp/800x600.png"
-              )
+              img.p-home-top__img(src="https://placehold.jp/800x600.png")
 
     .c-section
       .c-section__inner.-maw_m
@@ -129,10 +141,9 @@ append body
           .p-home-reason__inner
             .p-home-reason__text-box
               .p-home-reason__heading
-                | 暑中休暇を
-                span.u-no-break 利用して
-                span.u-no-break 海水浴に
-                span.u-no-break 行った
+                +noBreak(
+                  [ '暑中休暇を', '利用して', '海水浴に', '行った']
+                )
 
               .p-home-reason__desc
                 p.p-home-reason__sentence
@@ -144,7 +155,9 @@ append body
     .c-section
       .c-section__inner.-maw_m.-pt_1.-pb_1
         section.p-home-section
-          .p-home-section__heading すぐ私の注意を惹いた
+          .p-home-section__heading
+            +noBreak(['すぐ', '私の', '注意を', '惹いた'])
+
           .p-home-section__sub-heading.-mt_1 先生と私
           .p-home-section__body
             .c-col.-min_300.-gap_1
@@ -154,7 +167,9 @@ append body
               .c-col__item hogehoge
 
         section.p-home-section
-          .p-home-section__heading わざと避けて東京の近くで
+          .p-home-section__heading
+            +noBreak(['わざと', '避けて', '東京の', '近くで'])
+
           .p-home-section__sub-heading.-mt_1 せっかく来た私
           .p-home-section__body
             .c-col.-min_300.-gap_1
@@ -190,11 +205,15 @@ append body
                 .c-button__text 東京の近く
 
         section.p-home-section
-          .p-home-section__heading 彼は電報を私に見せて
+          .p-home-section__heading
+            +noBreak(['彼は', '電報を', '私に', '見せて'])
+
           .p-home-section__sub-heading.-mt_1 一人ぼっちになった
           .p-home-section__body
 
         section.p-home-section
-          .p-home-section__heading 私がその掛茶屋で
+          .p-home-section__heading
+            +noBreak(['私が', 'その', '掛茶屋で'])
+
           .p-home-section__sub-heading.-mt_1 先生を見た時は
           .p-home-section__body

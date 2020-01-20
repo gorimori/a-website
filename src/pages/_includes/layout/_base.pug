@@ -1,3 +1,10 @@
+block mixins
+  //- @param {string[]} words
+  mixin noBreak(words)
+    each word in words
+      span.u-no-break !{word}
+
+
 block vars
   -
     meta = {
