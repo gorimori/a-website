@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 
 const chokidar = require('chokidar');
-const sass = require('node-sass');
+const sass = require('sass');
 
 /** @type {string[]} */
 const entryPoints = [
