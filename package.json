@@ -23,7 +23,7 @@
     "@types/webpack": "4.41.22",
     "chokidar": "3.4.2",
     "pug": "3.0.0",
-    "sass": "1.26.11",
+    "sass": "1.27.0",
     "ts-loader": "8.0.4",
     "typescript": "4.0.3",
     "webpack": "4.44.2",
