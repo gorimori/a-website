@@ -21,7 +21,7 @@
   "devDependencies": {
     "@11ty/eleventy": "0.11.1",
     "@types/webpack": "4.41.26",
-    "chokidar": "3.5.0",
+    "chokidar": "3.5.1",
     "pug": "3.0.0",
     "sass": "1.32.5",
     "ts-loader": "8.0.14",
