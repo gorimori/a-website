@@ -22,7 +22,7 @@
     "@11ty/eleventy": "0.11.1",
     "@types/webpack": "4.41.26",
     "chokidar": "3.5.1",
-    "pug": "3.0.0",
+    "pug": "3.0.2",
     "sass": "1.32.8",
     "ts-loader": "8.0.17",
     "typescript": "4.2.2",
