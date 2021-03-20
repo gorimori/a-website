@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/gorimori/a-website#readme",
   "devDependencies": {
-    "@11ty/eleventy": "0.11.1",
+    "@11ty/eleventy": "0.12.1",
     "@types/webpack": "4.41.26",
     "chokidar": "3.5.1",
     "pug": "3.0.2",
